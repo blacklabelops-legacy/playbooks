@@ -1,0 +1,7 @@
+---
+
+ - name: Apply root ssh key
+   hosts: all
+   remote_user: vagrant
+   roles:
+    - initialssh

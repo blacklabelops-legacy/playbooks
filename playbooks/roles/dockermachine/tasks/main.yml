@@ -1,0 +1,20 @@
+---
+#Install Latest Docker-Machine
+
+  - name: Install utilities
+    yum: name={{ item }}  state=latest
+    with_items:
+     - unzip
+     - curl
+
+  - name: Retrieve docker-machine tag
+    shell: curl -s https://api.github.com/repos/docker/machine/releases/latest | grep '[^\\S]\"tag_name\"' | tr -d [:space:]\", | awk -F'[:]' '{print $2$3}'
+    register: dockermachinetag
+
+  - debug: msg="{{ dockermachinetag.stdout_lines }}"
+
+  - name: Download Docker-Machine
+    get_url: url=https://github.com/docker/machine/releases/download/{{ item }}/docker-machine_linux-amd64.zip dest=/tmp/docker-machine_linux-amd64.zip
+    with_items: dockermachinetag.stdout_lines
+
+  - unarchive: src=/tmp/docker-machine_linux-amd64.zip dest=/usr/local/bin copy=no

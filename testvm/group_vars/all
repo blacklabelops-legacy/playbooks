@@ -1,0 +1,6 @@
+#User for administration of remote node
+username: "vagrant"
+userpass: "vagrant"
+
+# Devicemapper Sparce File Size in Gigabytes
+devicemapper_size: "40"

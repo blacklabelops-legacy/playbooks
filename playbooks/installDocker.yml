@@ -1,0 +1,9 @@
+---
+
+ # Docker
+ - name: Install Docker software
+   hosts: all
+   remote_user: "{{username}}"
+   sudo: yes
+   roles:
+    - docker

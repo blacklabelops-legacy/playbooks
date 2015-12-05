@@ -1,0 +1,16 @@
+---
+#Install Docker-Compose
+  
+  - name: install epel-release
+    yum: name=epel-release update_cache=yes state=latest
+
+  - name: Install pip
+    yum: name={{ item }}  state=latest
+    with_items:
+     - python-pip
+
+  - name: Install virtualenv through pip
+    pip: name={{ item }}
+    with_items:
+      - virtualenv
+      - docker-compose
