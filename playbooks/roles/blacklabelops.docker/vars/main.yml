@@ -1,0 +1,7 @@
+---
+# vars file for blacklabelops.docker
+
+  #Default vars
+
+  #Resize devicemapper, size in gigabytes
+  docker_devicemapper_size: 100

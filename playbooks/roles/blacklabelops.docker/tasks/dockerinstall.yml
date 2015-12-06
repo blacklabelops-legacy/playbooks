@@ -14,9 +14,3 @@
    register: dockerinstall
 
  - debug: msg="{{ dockerinstall }}"
-
- - name: Add User to docker group
-   action: user name={{ username }} groups=docker append=yes
-
- - name: Enable docker service
-   service: name=docker enabled=yes state=started

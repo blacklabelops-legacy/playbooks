@@ -2,7 +2,7 @@
 
  - name: Install Latest Docker
    hosts: all
-   remote_user: "{{username}}"
+   remote_user: "{{ username }}"
    sudo: yes
    roles:
-    - docker
+    - { role: blacklabelops.docker, docker_username: "{{ username }}" }

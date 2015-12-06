@@ -1,0 +1,18 @@
+---
+# tasks file for blacklabelops.docker
+
+  - name: Install latest Docker
+    include: dockerinstall.yml
+    tags: docker
+
+  - name: Setup Docker user
+    include: dockeruser.yml
+    when: docker_username is defined
+    tags: docker
+
+  - name: Resize Devicemapper
+    include: devicemapper.yml
+    when: docker_devicemapper_size is defined
+
+  - name: Start Docker service
+    include: dockerservice.yml
