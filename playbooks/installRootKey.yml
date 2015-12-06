@@ -2,6 +2,6 @@
 
  - name: Apply root ssh key
    hosts: all
-   remote_user: vagrant
+   remote_user: "{{username}}"
    roles:
     - initialssh
