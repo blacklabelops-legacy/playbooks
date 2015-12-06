@@ -1,4 +1,0 @@
----
-
-  - name: Add User to docker group
-    action: user name={{ docker_username }} groups=docker append=yes
