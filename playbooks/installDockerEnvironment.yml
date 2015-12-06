@@ -1,0 +1,9 @@
+---
+
+ # Full install of a docker tools
+
+ - include: installDocker.yml
+
+ - include: installDockerCompose.yml
+
+ - include: installDockerMachine.yml

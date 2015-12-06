@@ -1,7 +1,6 @@
 ---
 
- # Docker
- - name: Install Docker Machine
+ - name: Install Latest Docker-Macine
    hosts: all
    remote_user: "{{username}}"
    sudo: yes

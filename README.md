@@ -4,6 +4,11 @@ Ansible playbooks for provisioning of Vagrant Boxes.
 
 # Make it short (Testing)
 
+First install:
+
+* [Vagrant](https://www.vagrantup.com/)
+* [Virtualbox](https://www.virtualbox.org/)
+
 1. Start Test VM
 
 ~~~~
@@ -29,3 +34,10 @@ $ ansible-playbook -i hosts ../playbooks/installDocker.yml
 $ cd testvm
 $ ./destroyHosts.sh
 ~~~~
+
+# References
+
+* [Vagrant](https://www.vagrantup.com/)
+* [Virtualbox](https://www.virtualbox.org/)
+* [Ansible](http://www.ansible.com/)
+* [Ansible Docs](http://docs.ansible.com/)

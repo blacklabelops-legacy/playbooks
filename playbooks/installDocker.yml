@@ -1,7 +1,6 @@
 ---
 
- # Docker
- - name: Install Docker software
+ - name: Install Latest Docker
    hosts: all
    remote_user: "{{username}}"
    sudo: yes
