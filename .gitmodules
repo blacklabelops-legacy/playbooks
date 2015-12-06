@@ -1,3 +1,0 @@
-[submodule "playbooks/roles/blacklabelops.docker"]
-	path = playbooks/roles/blacklabelops.docker/
-	url = https://github.com/blacklabelops/ansible-docker.git
